@@ -6,12 +6,10 @@ body {
     margin-right: auto;
     margin-left: auto;
     width: 70%;
-
     background: white;
     text-align: left;
 } input[type=button] {
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
     color:black;
     background-color: white;
-
 }
