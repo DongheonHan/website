@@ -47,4 +47,51 @@ hr {
     text-align: center;
     font-family: monospace;
 
+  } .centerxSmall {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border: 0;
+  } .centerSmall {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: 0;
+  }.centerMan {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border: 0;
+  } .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  .row::after {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } .row {
+    display: flex;
+  }
+  .column {
+    flex: 20%;
+    padding: 10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  } .ImageBorder {
+      border-width: 0px;
+      border-color: Black;
+      margin-top: 0px;
+      margin-bottom: 0px;
+  } .centerxxx {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    border: 0;
   }
