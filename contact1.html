@@ -23,7 +23,7 @@
     } 
     </style>
     <p></p>
-    <h3>1. Implementation and Development of a Tractor’s Path Tracking Algorithm Based on Dynamic Target Control</h3>
+    <h2>1. Implementation and Development of a Tractor’s Path Tracking Algorithm Based on Dynamic Target Control</h2>
     
     <p></p>
     <div class="container">
@@ -33,20 +33,33 @@
     </div>
 
     <p>Recently, due to the development of IT convergence technology, environmental implantation sensor technology, and the low cost of the controller, the autonomous vehicle industries are rapidly developing. This study develops a path tracking algorithm based on autonomous steering control technology, which is one of the core technologies among autonomous driving technologies. </p>
-    <p>In order to develop a path tracking algorithm, the kinematic state (position coordinates, heading angle, steering angle) of the vehicle was updated using a two-dimensional bicycle model, which is simplified modeling of the lateral movement of the vehicle. The desired path was created based on the waypoints, and the head angle and distance of the tractor from the desired path were used as an error.</p>
-
+    <p>In order to develop a path tracking algorithm, the kinematic state (position coordinates, heading angle, steering angle) of the vehicle was updated using a two-dimensional bicycle model (figure 1 left), which is simplified modeling of the lateral movement of the vehicle. The desired path was created based on the waypoints, and the head angle and distance of the tractor from the desired path were used as an error (figure 1 right).</p>
 
     <p></p>
     <img src="img/bicycleError.png" class="centerSmall">  
-    <h5>Figure 1: Left - bicycle model, Right - Control feedback </h5>
+    <h5>Figure 1: Left - bicycle model, Right - control feedback </h5>
+
+    <p>To give higher productivity and easier accessibility,  Object-Oriented Programming (OOP) was used to implement a high-level control of a tractor. A tractor's path tracking algorithm consists of 4 steps (figure 2). </p>
+    <p>First, the initial position of the tractor and boundary conditions are initialized (orange line).
+        Second, to give realistic steering and accelerating scenario, steering and speed delay (Time delay occurs in the system due to the mechanical properties of the tractor) were applied in the algorithm (yellow line).
+        Third, path tracking was conducted by using head angle and distance error's P control and estimated tractor's speed and steering angle at that moment (blue line). 
+        Fourth, by using steering angle and speed, the vehicle's updated position and head angle were calculated. If the tractor arrives in the target range, the loop breaks, and the program would be terminated (purple line). 
+    </p>
+
+
     <img src="img/tractorAlgorithm.png" class="centerx"> 
     <h5>Figure 2: Path Tracking Algorithm</h5>
+
+    <p>The path tracking algorithm has the disadvantage that it cannot perfectly reflect the actual steering and accelerating scenario. That is why the delay was included in the algorithm. 
+        Steering and acceleration delay caused a dynamic variation in the magnitude of the error vector. Therefore, dynamic target control was required, and the size of the target was modified depending on vehicle's position.</p>
+    <p>The algorithm has been completely implemented in both MATLAB and C++, and the path tracking algorithm is currently being tested to find the optimized target radii (figure 1 right) and optimized gains (P control). </p>
+    <p>Figure 3 is the waypoints that were used in the experiment to show the newly developed algorithm's performance. 
+    The video shows as a result of an experiment, an efficient path tracking of the algorithm. A steering delay of 0.1 was used and a target radii of 3m and 6m was applied in the experiment.</p>
     <img src="img/waypoints.png" class="centerSmall"> 
-    <h5>Figure 3: 0.1 Second Steering Delay - waypoints </h5>
+    <p></p>
     <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/n0g-M9wnl44" frameborder="0" title="SNU_1" width = "80%" height = "500px"></iframe></div>
-    <h5>Figure 4: 0.1 Second Steering Delay</h5>
-    
-    <p>Bio</p>
+    <h5>Figure 3: Waypoints and the result</h5>
+
     <hr>
     <p></p>
 

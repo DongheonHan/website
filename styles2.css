@@ -21,7 +21,7 @@ hr {
     width: 60%;
   } h4 {
     text-align: left;
-    font-size: small;
+    font-size: medium;
   }.center3 {
     display: block;
     margin-left: auto;
@@ -34,7 +34,7 @@ hr {
     width: 90%;
   } h5 {
     text-align: center;
-    font-size: small;
+    font-size: medium;
   } h6 {
     text-align: center;
     font-size: large;
