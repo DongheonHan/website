@@ -108,29 +108,38 @@ hr {
 } .button:hover{
   background-color: lightblue;
 }.button1{
-  background-color: white;
+  font-size: medium;
+  background-color: black;
+  color: white;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  height: 20px;
+  height: 25px;
   width: fit-content;
+  border-color: red;
 } .button1:hover{
- background-color: black;
-color:white;
+  background-color: white;
+  color:black;
 text-align: center;
 font-family: 'Courier New', Courier, monospace;
-height: 20px;
+height: 25px;
 width: fit-content;
+border-color: blue;
 
 }.button2{
-  background-color: white;
+  font-size: medium;
+  background-color: black;
+  color: white;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  height: 20px;
+  height: 25px;
   width: fit-content;
   border-radius: 100%;
+  border-color: red;
 } .button2:hover{
- background-color: black;
-color:white;
+ background-color: white;
+ color:black;
+ height: 25px;
+ border-color: blue;
 }.centerxL {
   display: block;
   margin-left: auto;
