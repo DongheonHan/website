@@ -32,6 +32,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    border: 0;
   } h5 {
     text-align: center;
     font-size: medium;
@@ -73,12 +74,12 @@ hr {
   .row::after {
     clear: both;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+ 
   } .row {
+    display: block;
     display: flex;
-  }
-  .column {
+    margin-bottom: 0%;
+  } .column {
     flex: 20%;
     padding: 10%;
     margin-top: 0px;
@@ -94,4 +95,47 @@ hr {
     margin-right: auto;
     width: 45%;
     border: 0; 
-  } 
+  } .column2 {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 0%;
+  
+} .button{
+   background-color: white;
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;
+   margin: 4px 2px;
+} .button:hover{
+  background-color: lightblue;
+}.button1{
+  background-color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  height: 20px;
+  width: fit-content;
+} .button1:hover{
+ background-color: black;
+color:white;
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+height: 20px;
+width: fit-content;
+
+}.button2{
+  background-color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  height: 20px;
+  width: fit-content;
+  border-radius: 100%;
+} .button2:hover{
+ background-color: black;
+color:white;
+}.centerxL {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 0;
+} 
+  
