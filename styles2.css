@@ -6,6 +6,7 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+    border-color: black;
   } .center {
     display: block;
     margin-left: auto;
@@ -123,7 +124,7 @@ text-align: center;
 font-family: 'Courier New', Courier, monospace;
 height: 25px;
 width: fit-content;
-border-color: blue;
+border-color: black;
 
 }.button2{
   font-size: medium;
@@ -139,7 +140,7 @@ border-color: blue;
  background-color: white;
  color:black;
  height: 25px;
- border-color: blue;
+ border-color: black;
 }.centerxL {
   display: block;
   margin-left: auto;
@@ -151,4 +152,3 @@ border-color: blue;
   font-family: 'Courier New', Courier, monospace;
 
 }
-  
