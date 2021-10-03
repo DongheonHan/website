@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Dong Heon Han</title>
+    <title>Project 1</title>
     <link rel = "stylesheet" href="styles.css">
 </head>
 
@@ -22,10 +22,13 @@
         border: 1px ridge black;
     } 
     </style>
+
+  
     <p></p>
     <h2>1. Implementation and Development of a Tractor’s Path Tracking Algorithm Based on Dynamic Target Control</h2>
     
     <p></p>
+    
     <div class="container">
         <form>
             <input class="button1" onclick="window.location.href='https://github.com/DongheonHan/pathTrackingAlgorithm.git';" value="Codes" style=" cursor: pointer;"/>
@@ -54,7 +57,8 @@
 
     <p>The path tracking algorithm has the disadvantage that it cannot perfectly reflect the actual steering and accelerating scenario. That is why the delay was included in the algorithm. 
         Steering and acceleration delay caused a dynamic variation in the magnitude of the error vector. Therefore, dynamic target control was required, and the size of the target was modified depending on vehicle's position.</p>
-    <p>The algorithm has been completely implemented in both MATLAB and C++, and the path tracking algorithm is currently being tested to find the optimized target radii (figure 1 right) and optimized gains (P control). </p>
+    <p>The algorithm has been completely implemented in both MATLAB and C++, and the path tracking algorithm is currently being tested to find the optimized target radii (figure 1 right) and optimized gains (P control). Currently, the target radius is being optimized by using the Machine Learning method to change the target radius dynamically according to the different situations.</p>
+    
     <p>Figure 3 is the waypoints that were used in the experiment to show the newly developed algorithm's performance. 
     The video shows as a result of an experiment, an efficient path tracking of the algorithm. A steering delay of 0.1 was used and a target radii of 3m and 6m was applied in the experiment.</p>
     <img src="img/waypoints.png" class="centerSmall"> 
@@ -68,7 +72,7 @@
 
     <div class="container">
         <form>
-            <input class="button1" onclick="window.location.href='index.html';" value="Home" style=" cursor: pointer;"/>
+            <input class="button2" onclick="window.location.href='index.html';" value="Home" style=" cursor: pointer;"/>
         </form>
     </div>
     <p></p>

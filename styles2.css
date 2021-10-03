@@ -46,7 +46,7 @@ hr {
     border: 0;
   } .container {
     text-align: center;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
 
   } .centerxSmall {
     display: block;
@@ -137,5 +137,9 @@ color:white;
   margin-right: auto;
   width: 100%;
   border: 0;
-} 
+} .container2 {
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+
+}
   
