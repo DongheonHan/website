@@ -32,34 +32,26 @@
     </div>
     <img src="img/3_Capstone.png" class="centerx"> 
 
-    <p>There currently is high demand for a continuously variable nozzle attachment for leaf blowers. The idea of a continuously variable nozzle is that the user can adjust the airspeed of the blower with minimal input, for various applications such as removing heavier debris, like wet grass/leaves from a sidewalk.  </p>
-    <p>The current solution to increasing the speed is using attachments called “speed tips,” which come in various shapes and sizes/diameters. 
-        Techtronic Industries (TTI) has tasked the team with developing a simple solution in order to reduce part count in the purchase of a leaf blower. 
-        In addition, the output air has to have a minimum flow rate of 550 CFM.</p>
-    <p>The figure 1 shows the exploded view of the newly invented variable diameter nozzle in Georgia Tech Summer 2021 Capstone Expo.</p>
+    <p>There currently is high demand for a continuously variable nozzle attachment for leaf blowers. The idea of a continuously variable nozzle is that the user can adjust the airspeed of the blower with minimal input, for various applications such as removing heavier debris like wet grass or leaves from a sidewalk.</p>
+    <p>The current solution to increasing the speed is using attachments called speed tips, which come in various shapes and sizes/diameters. Techtronic Industries (TTI) tasked the team with developing a simple solution to reduce part count in the purchase of a leaf blower. In addition, the output air had to have a minimum flow rate of 550 CFM.</p>
+    <p>Figure 1 shows an exploded view of the newly invented variable diameter nozzle at the Georgia Tech Summer 2021 Capstone Expo.</p>
 
     <img src="img/move3.gif" class="centerxSmall">  
     <h5>Figure 1: Exploded view of the variable nozzle</h5>
     
-    <p>To vary the speed of the outlet fluid, the nozzle's outlet diameter has to be changed. However, if the diameter changes significantly, as a result, the turbulence might be caused. 
-        Particularly for the air, because of its relatively small bulk modulus, there is more likely the turbulence could be occured. 
-        Therefore, the organically shaped aerodynamical design of the variable nozzle is necessary and its shape's aerodynamical performance could be numerically judged by estimating CFM flowrate. </p>
-        <p>Table 1 shows 8 constraints that were provided by TTI. Besides maximum speed and CFM flow rate, there were more constraints related to manufacturing efficiency, safety, marketability, and durability.</p>
+    <p>To vary the speed of the outlet fluid, the nozzle's outlet diameter had to be changed. However, a significant change in diameter could cause turbulence. In particular, air, with its relatively small bulk modulus, could make turbulence more likely to occur. Therefore, an organically shaped, aerodynamical design of the variable nozzle was necessary. Its aerodynamical performance could be numerically evaluated by estimating CFM flowrate.</p>
+        <p>Table 1 shows the 8 constraints provided by TTI. In addition to maximum speed and CFM flow rate, there were constraints related to manufacturing efficiency, safety, marketability, and durability.</p>
        
     <h5>Table 1: Design constraints and results</h5>
     <img src="img/constraints.png" class="centerx">
     
-    <p>There were three motivating mechanisms and designs. The jet engine's shape and diameter varying method were considered the most aerodynamically efficient (figure 2 left). However, it had so many parts and was too complicated to be mass-produced. 
-        Therefore, to find a way to decrease part counts and operate similarly, a gear cam mechanism was used (figure 2 middle). The gear cam mechanism decreased the part counts and made the nozzle's diameter could be altered by a simple manipulation. 
-        To seal each petals' gaps, vegetable cooker's mechanism was used. When fully petals were opened or closed, each petal overlap with the next petal to minimize the air leakage (figure 2 right).</p>
+    <p>There were three motivating mechanisms and designs used for reference. The jet engine's shape and its varying diameter method were considered aerodynamically efficient (figure 2 left). However, the engine's model involved too many parts and was too complicated to be mass-produced. Therefore, to decrease part count while keeping similar operation effects, gear cam mechanism was used (figure 2 middle). The gear cam mechanism decreased the part count and enabled the diameter of the nozzle to be altered with simple manipulation. To seal the gaps in between each petal, the mechanism of a vegetable cooker was referenced. When petals are fully opened or closed, each petal overlaps with the next to minimize air leakage (figure 2 right).</p>
 
 
     <img src="img/concepts.png" class="centerx"> 
-    <h5>Figure 2: Motivated mechanisms and designs - jet nozzle (left), gear cam mechanism (middle), vegetable cooker (right)</h5>
+    <h5>Figure 2: Motivating mechanisms and designs - jet nozzle (left), gear cam mechanism (middle), and vegetable cooker (right)</h5>
 
-    <p>Figure 3 shows the mechanism of the variable diameter nozzle. 6 levers attached to each petal (black) were connected to the bottom adjusting collar (orange) and each petal had one degree of freedom toward the rotating direction. 
-        Therefore, it had the advantage of being able to manipulate 6 petals at once, and by using 6 detents, the radius of the nozzle could be reduced semi-continously for 6 steps.
-    </p>
+    <p>Figure 3 shows the mechanism of the variable diameter nozzle. 6 levers, each attached to a petal (black), were connected to the bottom adjusting collar (orange), and each petal had one degree of freedom toward the rotating direction. This design provided an advantage of being able to manipulate all 6 petals at once. And by using 6 detents, the radius of the nozzle could be reduced semi-continously for 6 steps.</p>
     <!--Add gif here-->
     <div class="row">
         <div class="column">
@@ -70,12 +62,8 @@
         </div>
     </div>
     <h5>Figure 3: The mechanism of variable diameter nozzle</h5>
-    <p>Figure 4 shows the result of the CFD analysis. CFD analysis was conducted by using Siemens NX's flow analysis. For the assumptions, deformation of the variable nozzle was ignored, the air was assumed to have constant properties, the air temperature was assumed to be constant, and the surface was assumed to be smooth. 
-        As a result, the maximum outlet air satisfied the maximum constraint at 170.61 mph (fully closed), but the CFM flow rate was 399.61 to 521.42 CFM which did not fully satisfy the constraint (Table 1). 
-        The results of the CFD analysis were compared with the actual values based on the scale test standard provided by TTI (percent difference of less than 10%). </p>
-    <p>High-velocity air (125 mph inlet and 170.61 mph outlet) caused a certain amount of pressure to the petals. 
-        The pressure was estimated from CFD analysis, and the pressure was used as a loading condition to determine the factor of safety of the petals' levers where the maximum stress was applied. 
-        Furthermore, the pressure changes cause dynamic loading, the fatigue analysis was conducted to judge its durability (5000 cycles durability constraint - Table 1). </p>
+    <p>Figure 4 shows the result of the CFD analysis. CFD analysis was conducted by using Siemens NX's flow analysis. For assumptions, deformation of the variable nozzle was ignored, the air was assumed to have constant properties, the air temperature was assumed to be constant, and the surface was assumed to be smooth. As a result, the maximum outlet air satisfied the maximum constraint at 170.61 mph (fully closed), but the CFM flow rate was 399.61 to 521.42 CFM, which did not fully satisfy the constraint (Table 1). The results of the CFD analysis were compared with the actual values based on the scale test standards provided by TTI (percent difference of less than 10%). </p>
+    <p>High-velocity air (125 mph inlet and 170.61 mph outlet) caused a certain amount of pressure to the petals. The pressure was estimated from CFD analysis, and it was used as a loading condition to determine the factor of safety for the levers on the petals where maximum stress was applied. Furthermore, as pressure changes caused dynamic loading, fatigue analysis was conducted to judge the product's durability (5000 cycles durability constraint - Table 1). </p>
         <div class="row">
             <div class="column2">
                 <img src="img/CFDmove.gif" style="width:100%" class = "ImageBorder">
@@ -87,7 +75,7 @@
         <h5>Figure 4: CFD analysis of variable diameter nozzle</h5>
         
 
-    <p>The video link in figure 5 gives more details that include FEA results, design ideas, manufacturing process, numerical test values, noise test results, description of each part, etc. The team placed 3rd at the summer 2021 Capstone expo.</p>
+    <p>The video link in figure 5 gives more details that include FEA results, design ideas, manufacturing process, numerical test values, noise test results, description of each part, etc. The team placed 3rd at the GT Summer 2021 Capstone Expo.</p>
     
     
 
