@@ -137,7 +137,6 @@ border-color: black;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   height: 25px;
-  width: 20%;
   border-color: white;
 } .button3:hover{
   background-color: white;
@@ -145,7 +144,6 @@ border-color: black;
 text-align: center;
 font-family: 'Courier New', Courier, monospace;
 height: 25px;
-width: 20%;
 border-color: black;
 
 }
