@@ -146,6 +146,8 @@ font-family: 'Courier New', Courier, monospace;
 height: 25px;
 border-color: black ;
 
+} span {
+  font-weight: bold;
 }
 
 
