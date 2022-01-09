@@ -173,23 +173,16 @@ border-color: black ;
 } .container2 {
   text-align: left;
   font-family: 'Courier New', Courier, monospace;
-
 }
-
 .button7{
   font-size: medium;
-  background-color: white;
-  color: black;
+
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  height: 25px;
-  border-color: black;
-} .button7:hover{
-  background-color: black;
-  color:white;
-text-align: center;
-font-family: 'Courier New', Courier, monospace;
-height: 25px;
-border-color: white ;
+} 
 
+.button7:hover{
+
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 } 
