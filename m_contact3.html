@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link
+            rel = "shortcut icon"
+            sizes = "16x16 32x32 64x64" 
+            href = "img/iconImage.jpg"  
+        />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <link rel = "stylesheet" href="m_styles.css">
+</head>
+
+<body>
+    <link rel = "stylesheet" href= "styles2.css">
+
+    <style>
+    img {
+        border: 1px ridge black;
+    }
+    </style>
+    <p></p>
+    <h2>3. Computer-Aided Manufacturing and Dynamic Analysis of a Six Degrees of Freedom Stewart Platform Manipulator</h2>
+    <div class="container">
+        <form>
+            <button type="button" class="button3" onclick="window.location.href='https://github.com/DongheonHan/StewartPlatform.git';" style=" cursor: pointer;">Codes</button>
+            <button type="button" class="button3" onclick="window.location.href='Doc/PURA.pdf';" style=" cursor: pointer;">Research Proposal</button>
+        </form>
+    </div>
+    <img src="img/SP1.png" class="centerx">  
+    <p>The ongoing research project in the Georgia Tech LIDAR (Laboratory for Intelligent Decision and Autonomous Robots) proposes to make a robot called Athena that mimics human behavior and achieves human-level agility. The team had been working on Athena’s upper body and needed a neck platform that connects the upper body and the head (pictures above). </p>
+    <p>Most robots’ neck platforms consist of 3 to 4 degrees of freedom serial manipulators (figure 1 left). However, the human neck has more complicated kinematic aspects - 24 degrees of freedom and 8 links (figure 1 middle). In order to create neck movements more similar to that of humans, a manipulating structure that uses 6 degrees of freedom Stewart platform was deemed suitable for humanoid neck movements (figure 1 right).</p>
+
+    
+
+    <img src="img/SPmotivation.png" class="centerSmall"> 
+    <h5>Figure 1: Left - traditional humanoid robot neck's mechanism, middle - human neck's biomechanical mechanism, and right - Stewart Platform's mechanism</h5>
+
+    <p>The Stewart Platform was modeled in Computer-Aided Design (CAD) using SolidWorks, allowing the neck to be connected to other parts of Athena. The design was based on the existing design of the traditional Stewart platform and simplified for easier and quicker manufacturing, i.e., Additive Manufacturing (AM). </p>
+    <p>Six pairs of 2DOF universal joints were used to connect the P16 actuators (Actuonix P16-50-22- 12-P). The plates were tilted and moved by manipulation of the 6 actuators. By using Arduino MEGA, L298N H-Bridge Motor Driver, and 12v constant voltage power supply, ±12V of square wave current’s duty cycle was controlled with potentiometer feedback (potentiometer signal represented actuator's position) from the P16 actuators. Furthermore, the circuit for a single actuator's position control was designed as shown in figure 2. Through MATLAB's System ID and the PID response experiment of the P16 actuators, suitable PID gains that satisfied the response constraints were found. </p>
+   
+    <img src="img/circuitSmall.png" class="centerSmall"> 
+    <h5>Figure 2: Single actuator's circuit design and PID tuning</h5>
+
+    <p>The same method used to control 1 actuator was used to control 6 actuators simultaneously (figure 3). Each L298N H-Bridge Motor Driver adjusted the PWM value of the actuator according to the duty cycle provided by Arduino, and, as a result, the actuators' speeds were changed with respect to time. Consequently, each actuator could reach the desired position in a given time domain.</p>
+    <img src="img/circuitBig.png" class="centerSmall"> 
+    <h5>Figure 3: Stewart Platform's circuit design</h5>
+
+    <p>A dynamic simulation (yaw, pitch, and roll motions) of the Stewart Platform was performed using MATLAB and Simulink. By conducting inverse and forward kinematics, each actuator's position (the distance from one universal joint to the other) was calculated with respect to the desired Euler angle (yaw, pitch, and roll) using MATLAB.</p>
+    <p>As shown in figure 4, simulation was designed to calculate the length of each actuator by inputting an arbitrary Euler angle as an input value. The calculation method was later used to calculate the actuators' positions in the Arduino control of the Stewart Platform.</p>
+    <img src="img/sim.png" class="centerx"> 
+    <h5>Figure 4: MATLAB Stewart Platform simulator</h5>
+
+    <p>In order to synchronize the 6 actuators, the algorithm shown in figure 5 was used. Two important points of the algorithm are that (1) the main loop is terminated when the 6 actuators successfully reach the desired position, and (2) in one iteration of the main loop, each actuator estimates an error and provides a PWM signal, and the number of iterations increases until the main loop satisfies the given condition.</p>
+    <p>For the user to directly control the Stewart Platform, an IMU called MPU6050 provided an Euler angle to the Stewart Platform. By tilting the IMU, the user could tilt and move the platform as they wanted. The code that allows for direct control of the platform using an IMU was developed.</p>
+    <p>The algorithm starts with user input. After the user gives an Euler angle as an input, the function calculates the actuators’ positions (same method as MATLAB simulation) that are used for the desired position of the PID control. The duty cycle determined by the Arduino changes according to the size of the error. For instance, the duty cycle decreases as the value of the error decreases and vice versa. The L298N H-Bridge Motor Driver provides suitable PWM signals to the actuators. The loop continues to run until the error of 6 actuators is within the given error range (4mm). </p>
+    
+    <img src="img/SPAlgo.png" class="centerx"> 
+    <h5>Figure 5: Stewart Platform's low level control algorithm</h5>
+    <p>Figure 6 shows the process of controlling the Stewart Platform. Figures 6.4 and 6.5 show the final results of the project. </p>
+    <p>2DOF universal joints did not provide enough flexibility because of friction occurring from the other actuators; therefore, joints with 3DOF may increase the flexibility of the platform. In addition, poor circuit connection changed the direction of the current and caused unpredictable problems in the overall motion of the Stewart Platform. Because only breadboard and wire were used for the circuit design, this problem can be solved by soldering wires and using the PCB board instead of the breadboard. Precision and accuracy of the movement of the Stewart Platform can be improved through measurement of the angles. Lastly, the Stewart Platform needs to be integrated with Athena's eyes and body.</p>
+    <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/HXChSdHMLsQ" 
+        frameborder="0" title="SNU_1" width = "80%" height = "500px"></iframe></div>
+    <h5>Figure 6.1: 2 actuators control</h5>
+
+    <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/XnTuXm14S2I" 
+        frameborder="0" title="SNU_1" width = "80%" height = "500px"></iframe></div>
+    <h5>Figure 6.2: Synchronized 6 DOF actuators</h5>
+
+    <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/KRt99aUA2xY" 
+        frameborder="0" title="SNU_1" width = "80%" height = "500px"></iframe></div>
+    <h5>Figure 6.3: Simple movement of Stewart Platform - yaw, pitch, and roll</h5>
+
+    <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/vtP4X0fg0ZM" 
+        frameborder="0" title="SNU_1" width = "80%" height = "500px"></iframe></div>
+    <h5>Figure 6.4: Final results - optimized speed control</h5>
+
+    <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/bpYUk4oSZYY" 
+        frameborder="0" title="SNU_1" width = "80%" height = "500px"></iframe></div>
+    <h5>Figure 6.5: Final results - IMU feedback</h5>
+
+    <hr>
+    <p></p>
+    <div class="container">
+        <form>
+            <button type="button" class="button3" onclick="window.location.href='m_index.html';" style=" cursor: pointer;">Home</button>
+        </form>
+    </div>
+    <p></p>
+
+</body>
+
+</html>
